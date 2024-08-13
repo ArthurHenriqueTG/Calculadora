@@ -3,13 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>calculadora</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .fundo{
+            background-color: silver;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .botao{
+            background-color: rgb(231, 228, 228);
+            width: 90px;
+            height: 55px;
+            font-size: 25px;
+            border-radius: 0,6px;
+            padding: 10px;
+        } 
+        .botao1{
+            background-color: silver;
+            width: 90px;
+            height: 55px;
+            font-size: 25px;
+            border-radius: 0,6px;
+            padding: 10px;
+        }
+        .botao2{
+            background-color: red;
+            width: 90px;
+            height: 55px;
+            font-size: 25px;
+            border-radius: 0,6px;
+            padding: 10px;
+        }
+        .botao3{
+            background-color: rgb(36, 172, 36);
+            width: 90px;
+            height: 55px;
+            font-size: 25px;
+            border-radius: 0,6px;
+            padding: 10px;
+        }
+        .calculadora{
+            position: absolute;
+            background-color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+        }
+        #resultado{
+            width: 360px;
+            background-color: silver;
+            height: 45px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+    </style>
 </head>
 <body>
-<div class="fundo"></div>
-<h1>Arthur Tresena</h1>
-<div class="calculadora"></div>
-<h1>Calculadora</h1>
-<h1>AQUI TU FAZ AS ALTERAÇÕES NORMALMENTE E SALVA</h1>
+    <div class="fundo"></div>
+    <div class="calculadora">
+    <p id="resultado"></p>
+    <table>
+        <tr>
+            <td><button class="botao1" onclick="clean()">C</button></td>
+            <td> <button class="botao1" onclick="insert('/')">/</button></td>
+            <td> <button class="botao1" onclick="insert('*')">*</button></td>
+            <td> <button class="botao2" onclick="back()">DEL</button></td>
+        </tr>
+        <tr>
+            <td><button class="botao" onclick="insert('7')">7</button></td>
+            <td><button class="botao" onclick="insert('8')">8</button></td>
+            <td><button class="botao" onclick="insert('9')">9</button></td>
+            <td><button class="botao1" onclick="insert(-)">-</button></td>
+        </tr>
+        <tr>
+            <td><button class="botao" onclick="insert('4')">4</button></td>
+            <td><button class="botao" onclick="insert('5')">5</button></td>
+            <td><button class="botao" onclick="insert('6')">6</button></td>
+            <td><button class="botao1" onclick="insert('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button class="botao" onclick="insert('1')">1</button></td>
+            <td><button class="botao" onclick="insert('2')">2</button></td>
+            <td><button class="botao" onclick="insert('3')">3</button></td>
+            <td rowspan="2"><button class="botao3" oncliclick="calcular()">=</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button class="botao" onclick="insert('0')">0</button></td>
+            <td><button class="botao" onclick="insert('.')">.</button></td>
+        </tr>
+
+    </table>
+    
 </body>
 </html>
