@@ -22,6 +22,8 @@
             font-size: 25px;
             border-radius: 0,6px;
             padding: 10px;
+            border-color: white;
+             border-radius: 10px;
         } 
         .botao1{
             background-color: silver;
@@ -30,6 +32,8 @@
             font-size: 25px;
             border-radius: 0,6px;
             padding: 10px;
+            border-color: white;
+            border-radius: 10px;
         }
         .botao2{
             background-color: red;
@@ -38,29 +42,47 @@
             font-size: 25px;
             border-radius: 0,6px;
             padding: 10px;
+            border-color: white;
+            border-radius: 10px;
         }
         .botao3{
             background-color: rgb(36, 172, 36);
             width: 90px;
-            height: 55px;
+            height: 110px;
             font-size: 25px;
             border-radius: 0,6px;
             padding: 10px;
+            border-color: white;
+            border-radius: 10px;
+        }
+        .botao4{
+            background-color: rgb(231, 228, 228);
+            width: 180px;
+            height: 55px;
+            font-size: 25px;
+            border-radius: 10px;
+            padding: 15px;
+            border-color: white;
+        
         }
         .calculadora{
-            position: absolute;
             background-color: white;
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
-            padding: 15px;
+            padding: 10px;
+
         }
         #resultado{
             width: 360px;
-            background-color: silver;
+            background-color: gainsboro;
             height: 45px;
             margin: 5px;
             border-radius: 5px;
+            border-color: white;
+            color: black;
+            font-size: 25px;
         }
 
     </style>
@@ -92,10 +114,10 @@
             <td><button class="botao" onclick="insert('1')">1</button></td>
             <td><button class="botao" onclick="insert('2')">2</button></td>
             <td><button class="botao" onclick="insert('3')">3</button></td>
-            <td rowspan="2"><button class="botao3" oncliclick="calcular()">=</button></td>
+            <td rowspan="2"><button class="botao3" style="110px" oncliclick="calcular()">=</button></td>
         </tr>
         <tr>
-            <td colspan="2"><button class="botao" onclick="insert('0')">0</button></td>
+            <td colspan="2"><button class="botao4" style="180px" onclick="insert('0')">0</button></td>
             <td><button class="botao" onclick="insert('.')">.</button></td>
         </tr>
 
@@ -103,3 +125,30 @@
     
 </body>
 </html>
+<script>
+    function insert(num)
+    {
+        var numero = document.getElementById('resultado').innerHTML
+        document.getElementById('resultado').innerHTML = numero + num;
+    }
+    
+    function clean()
+    {
+    document.getElementById('resultado').innerHTML = "";
+    }
+    function back()
+    {
+        var nummero = document.getElementById('resultado').innerHTML
+    document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.lenght -1);
+    }
+    function calcular()
+    {
+        var nummero = document.getElementById('resultado').innerHTML
+    document.getElementById('resultado').innerHTML = eval;
+    else
+    {
+    document.getElementById('resultado').innerHTML = "nada para calcular"
+    }
+    }
+
+</script>
